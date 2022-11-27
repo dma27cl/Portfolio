@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de monedas</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!---Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <!---Custom CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row conversor">
+            <div class="secIzq col-4">
+                <h1>Conversor de monedas nacional</h1>
+                <p>Pesos CLP $</p>
+                <input type="number" id="pesos" name="name" onkeyup="mostrar(this.value)" required />
+                <p>Moneda a convertir</p>
+                <select name="select" id="conversion">
+                    <option value="dolar" selected id="usd">Dólar Estadounidense</option>
+                    <option value="euro" id="euro">Euro</option>
+                    <option value="uf" id="uf">UF</option>
+                </select>
+                <button type="button" class="btn custom-btn" id="btnConvert">Convertir</button>
+            </div>
+            <div class="secDer col-4">
+                <p><span id="cont"></span> Pesos CLP equivalen a:</p>
+                <h2><span id="resultadoConvert"></span></h2>
+                <hr>
+                <p><span id="">Historial últimos 10 días</p>
+                <div>
+                <canvas id="speedChart"></canvas>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/script.js"></script>
+
+
+</body>
+
+</html>
